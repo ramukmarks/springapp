@@ -9,17 +9,11 @@
 
  	<!-- <http pattern="/login.htm" security="none"/> -->
  	<http pattern="/login.htm" security="none"/>
- 	<http pattern="/logout.htm" security="none"/>
 	<http use-expressions="true">
-		<form-login login-page="/login.htm" login-processing-url="/login.htm" default-target-url="/employee.htm" always-use-default-target="true" authentication-failure-url="/login.htm?err=1" username-parameter="username" password-parameter="password" />
-		<logout logout-success-url="/login.htm?out=1" delete-cookies="JSESSIONID" invalidate-session="true" />
+		<form-login login-page="/login.htm" login-processing-url="/authenticate.htm" default-target-url="/employee.htm" always-use-default-target="false" authentication-failure-url="/login.htm?err=1" username-parameter="username" password-parameter="password" />
+		<logout logout-success-url="/login.htm?out=1" logout-url="/logout.htm" delete-cookies="JSESSIONID" invalidate-session="true" />
 		<intercept-url pattern="/*.htm" access="isAuthenticated()" />	
 	</http>
-
-
- <!-- <authentication-manager> <authentication-provider> <user-service> <user 
-  name="user" password="user@123" authorities="ROLE_ADMIN" /> </user-service> 
-  </authentication-provider> </authentication-manager> -->
 
 	<authentication-manager>
 		<!-- <authentication-provider>

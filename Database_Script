@@ -1,0 +1,23 @@
+CREATE DATABASE `Employee` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+
+CREATE TABLE `employee_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `company` varchar(45) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  `type` enum('User','Admin') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user` (
+  `username` varchar(32) NOT NULL,
+  `enabled` int(11) DEFAULT '1',
+  `password` varchar(32) NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+
+
+

@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form action="login1.htm" method="post">
+<form:form action="authenticate.htm" method="post">
 	<table cellpadding="5">
 		<tr>
 			<td>Username</td>

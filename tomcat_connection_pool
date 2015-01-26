@@ -1,0 +1,37 @@
+<!-- Place it under <GlobalNamingResources> element in tomcat's conf/server.xml-->
+
+<Resource name="jdbc/TestDB"
+		global="jdbc/TestDB"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="com.mysql.jdbc.Driver" 
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		
+		url="jdbc:mysql://192.168.56.125:3306/Employee" 
+		username="ram"
+		password="ram@123"
+		
+		maxWait="10000"
+		initialSize="1"
+		maxActive="5"
+		maxIdle="2"
+		minIdle="1"
+		
+		timeBetweenEvictionRunsMillis="34000"
+		minEvictableIdleTimeMillis="55000"
+		
+		validationQuery="SELECT 1"
+		validationInterval="34"
+		
+		testOnBorrow="true"
+		removeAbandoned="true"
+		removeAbandonedTimeout="233"/>
+		
+		
+		
+<!--  Place it under <Context> element in tomcat's conf/context.xml -->
+
+<ResourceLink name="jdbc/MyLocalDB"
+                    global="jdbc/TestDB"
+                    auth="Container"
+                    type="javax.sql.DataSource" />		

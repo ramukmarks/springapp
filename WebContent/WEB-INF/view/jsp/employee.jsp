@@ -13,7 +13,7 @@
 <table width="100%" bgcolor="grey" style="color: white">
 	<tr>
 		<td>View Employees | <a href="addEmployee.htm" style="color: lightblue">Add Employee</a></td>
-		<td align="right">Welcome: <b><i><sec:authentication property="principal.username" /> </i></b> | <a href="<c:url value="j_spring_security_logout" />" > Logout</a></td>
+		<td align="right">Welcome: <b><i><sec:authentication property="principal.firstName" /> </i></b> | <a href="<c:url value="logout.htm" />" > Logout</a></td>
 	</tr>
 </table>
 <br><br><br>
